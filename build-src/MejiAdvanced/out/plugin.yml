@@ -1,0 +1,7 @@
+name: MejiAdvanced
+main: me.meji.advanced.MejiAdvancedPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Advanced scoreboard, nametag, join, death, and combat polish for Meji.
+folia-supported: true

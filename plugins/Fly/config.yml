@@ -1,0 +1,37 @@
+#
+# Thank you for using Fly!
+# Make sure you have the most upto date version from modrinth:
+# https://modrinth.com/plugin/fly
+#
+# Placeholders are supported!
+#
+
+fly:
+  # The message sent to the player who's flight's been toggled
+  self:
+    enabled: §0[§a✓§0]§r You can now fly
+    disabled: §0[§c!§0]§r You can no longer fly
+  # The message sent to the player who toggles another players flight
+  other:
+    enabled: §0[§a✓§0]§r Their flight has now been enabled
+    disabled: §0[§a✓§0]§r Their flight is now disabled
+    # Sent when the player doesn't have fly.toggle.other
+    nopermission: §0[§c!§0]§r You don't have permission to do that
+    # Sent when the player doesn't exist
+    notfound: §0[§c!§0]§r Unkown player
+
+flyspeed:
+  self:
+    # If PlayerHolderApi is installed you can use %fly_speed% to insert the players fly speed
+    set: §0[§a✓§0]§r Your flight speed has been changed
+  other:
+    set: §0[§a✓§0]§r Their flight speed has been changed
+    # Sent when the player doesn't have flyspeed.toggle.other
+    nopermission: §0[§c!§0]§r You don't have permission to do that
+    # Sent when the player doesn't exist
+    notfound: §0[§c!§0]§r Unkown player
+  noValue: §0[§c!§0]§r Please enter a valid value to set the flight speed to (0-10)
+
+# If to display all messages in the actionbar rather than in the chat
+# Console commands will naturally still appear in console
+actionBar: false
