@@ -1,0 +1,1 @@
+tellraw @a [{"text":"[Meji] ","color":"dark_purple","bold":true},{"text":"Map HUD helper loaded. Use ","color":"gray"},{"text":"/function meji_map:give","color":"aqua"},{"text":" to place the left-hand map.","color":"gray"}]

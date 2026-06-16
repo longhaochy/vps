@@ -1,0 +1,53 @@
+claims:
+  '0':
+    owner: tanpoint
+    world: world
+    min-x: -7
+    max-x: 11
+    min-z: 20
+    max-z: 33
+    trusted:
+    - electedrun19
+    - tanpoint
+    - zakk9857
+    - .zakk9857
+    - .electedrun19
+  '1':
+    owner: tanpoint
+    world: world
+    min-x: -31
+    max-x: -21
+    min-z: 28
+    max-z: 31
+    trusted:
+    - electedrun19
+    - tanpoint
+    - zakk9857
+    - .zakk9857
+    - .electedrun19
+  '2':
+    owner: tanpoint
+    world: world
+    min-x: -5
+    max-x: 0
+    min-z: -3
+    max-z: 3
+    trusted:
+    - electedrun19
+    - tanpoint
+    - zakk9857
+    - .zakk9857
+    - .electedrun19
+  '3':
+    owner: tanpoint
+    world: world
+    min-x: 4
+    max-x: 12
+    min-z: 6
+    max-z: 15
+    trusted:
+    - electedrun19
+    - tanpoint
+    - zakk9857
+    - .zakk9857
+    - .electedrun19

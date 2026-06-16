@@ -6,3 +6,118 @@
     z: 5.923747436857117
     yaw: 137.4242
     pitch: 18.719772
+  basetwo:
+    world: world
+    x: 1463.6317727238536
+    y: 71.0
+    z: -1560.4409731608532
+    yaw: 89.062096
+    pitch: 3.5171475
+  pvp:
+    world: flat
+    x: 3005.0226242773874
+    y: -60.0
+    z: -1852.3469335035882
+    yaw: -50.16223
+    pitch: 43.19905
+  warden:
+    world: world
+    x: 773.161637465225
+    y: -50.0
+    z: -528.0904115682933
+    yaw: 90.50696
+    pitch: 15.240049
+  fortress:
+    world: world_nether
+    x: -233.69998998807907
+    y: 58.0
+    z: -656.0749899880791
+    yaw: -65.296936
+    pitch: 28.426834
+  end:
+    world: world_the_end
+    x: 689.2859433045834
+    y: 57.0
+    z: -1298.393611651776
+    yaw: 92.911194
+    pitch: 28.944841
+  baru:
+    world: world_the_end
+    x: -880.7427251839609
+    y: 64.0
+    z: -1324.3940946683701
+    yaw: -36.46327
+    pitch: 27.214182
+  balek:
+    world: world_the_end
+    x: -3405.3674333954764
+    y: 60.0
+    z: -2173.125563743651
+    yaw: 89.92062
+    pitch: 33.72261
+00000000-0000-0000-0009-01f6a0daa89b:
+  village:
+    world: world
+    x: 118.335556
+    y: 71.0625
+    z: 218.33417
+    yaw: 33.338684
+    pitch: 44.38829
+  base:
+    world: world
+    x: -5.5
+    y: 69.0
+    z: 1.5
+    yaw: -90.0
+    pitch: 0.0
+  pvp:
+    world: flat
+    x: 3015.4714
+    y: -60.0
+    z: -1871.0151
+    yaw: -97.95607
+    pitch: 89.899994
+  fotred:
+    world: world_nether
+    x: -233.139
+    y: 58.0
+    z: -653.9457
+    yaw: -108.06937
+    pitch: 48.535828
+  fortress:
+    world: world_nether
+    x: -233.139
+    y: 58.0
+    z: -653.9457
+    yaw: -108.06937
+    pitch: 48.535828
+  portal:
+    world: world_nether
+    x: -241.66374
+    y: 34.5
+    z: -629.12
+    yaw: -19.101562
+    pitch: 61.531464
+00000000-0000-0000-0009-01f921b76c43:
+  fortres:
+    world: world_nether
+    x: -225.26547
+    y: 57.0
+    z: -652.012
+    yaw: -148.8457
+    pitch: 10.871231
+  base:
+    world: world
+    x: -4.5
+    y: 69.5625
+    z: 1.5
+    yaw: -90.0
+    pitch: 0.0
+adc74ca2-c0a1-36f2-8a05-d388e285e46c:
+  fortress:
+    world: world_nether
+    x: -228.07499998807907
+    y: 58.692081915952826
+    z: -654.6999999880791
+    yaw: -143.08147
+    pitch: 1.1247253

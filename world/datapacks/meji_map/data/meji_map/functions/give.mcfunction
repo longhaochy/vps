@@ -1,0 +1,2 @@
+item replace entity @a weapon.offhand with minecraft:map[minecraft:custom_name='{"text":"Meji Live Map","color":"aqua","bold":true,"italic":false}',minecraft:lore=['{"text":"Hold in offhand for the left-side game map.","color":"gray","italic":false}','{"text":"Works for Java and Geyser Bedrock players.","color":"dark_aqua","italic":false}']] 1
+tellraw @a [{"text":"[Meji] ","color":"dark_purple","bold":true},{"text":"Left-side map equipped. Open/use the map once if it is still blank.","color":"aqua"}]

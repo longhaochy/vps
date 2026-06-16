@@ -1,0 +1,7 @@
+name: KapakWeaponReach
+main: me.meji.kapakreach.KapakWeaponReachPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Adds hunger refill, enchant glint, and long-range hits for KapakWeapon.
+folia-supported: true

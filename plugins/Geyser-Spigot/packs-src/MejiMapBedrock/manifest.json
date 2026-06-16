@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Meji Map HUD",
+    "description": "Adds a left-side Meji map panel for Bedrock players.",
+    "uuid": "46f2d79c-c205-4e79-89fb-41ee1ff60f79",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 80]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "cb7e0d41-03c3-40f9-95fb-0f15b990497b",
+      "version": [1, 0, 0]
+    }
+  ]
+}

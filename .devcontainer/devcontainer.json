@@ -1,0 +1,3 @@
+{
+  "postStartCommand": "bash /workspaces/vps/scripts/start-playit.sh"
+}

@@ -1,0 +1,7 @@
+name: KapakWeaponOverpowerLive3
+main: me.meji.kapakoverpower.KapakWeaponOverpowerPlugin
+version: 1.0.3
+api-version: '1.21'
+author: Meji
+description: Live fixed overpower effects for KapakWeapon.
+folia-supported: true

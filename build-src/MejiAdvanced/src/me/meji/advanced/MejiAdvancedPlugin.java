@@ -1,8 +1,6 @@
 package me.meji.advanced;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
@@ -42,8 +40,7 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
         ChatColor.GRAY.toString(),
         ChatColor.DARK_GRAY.toString(),
         ChatColor.BLUE.toString(),
-        ChatColor.GREEN.toString(),
-        ChatColor.AQUA.toString()
+        ChatColor.GREEN.toString()
     };
     private final Map<UUID, Long> sessionStarted = new HashMap<>();
     private int taskId = -1;
@@ -54,7 +51,7 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
         for (Player player : Bukkit.getOnlinePlayers()) {
             setupPlayer(player);
         }
-        taskId = Bukkit.getScheduler().runTaskTimer(this, this::refreshAll, 20L, 60L).getTaskId();
+        taskId = Bukkit.getScheduler().runTaskTimer(this, this::refreshAll, 20L, 10L).getTaskId();
         getLogger().info("MejiAdvanced enabled: scoreboard, nametags, join/death/kill effects active.");
     }
 
@@ -141,7 +138,7 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
         }
         Objective sidebar = board.getObjective("mejiSide");
         if (sidebar == null) {
-            sidebar = board.registerNewObjective("mejiSide", "dummy", color("&d&lMEJI &8| &fSURVIVAL"));
+            sidebar = board.registerNewObjective("mejiSide", "dummy", gradient("MEJI", "#ff2bd6", "#28d7ff") + color(" &8◆ &fSURV"));
             sidebar.setDisplaySlot(DisplaySlot.SIDEBAR);
             int score = SIDEBAR_ENTRIES.length;
             for (String entry : SIDEBAR_ENTRIES) {
@@ -149,19 +146,19 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
             }
         }
 
-        List<String> lines = new ArrayList<>();
-        lines.add("&8&m--------------");
-        lines.add("&fName  &8» &b" + viewer.getName());
-        lines.add("&fPing  &8» &a" + viewer.getPing() + "ms");
-        lines.add("&fTPS   &8» " + tpsColor() + formatTps());
-        lines.add("&fDeath &8» &c" + viewer.getStatistic(Statistic.DEATHS));
-        lines.add("&fOnline&8» &e" + Bukkit.getOnlinePlayers().size() + "&7/&e" + Bukkit.getMaxPlayers());
-        lines.add("&fDay   &8» &6" + worldDay(viewer));
-        lines.add("&fPlayed&8» &d" + formatTicks(viewer.getStatistic(Statistic.PLAY_ONE_MINUTE)));
-        lines.add("&fHere  &8» &b" + formatMillis(System.currentTimeMillis() - sessionStarted.getOrDefault(viewer.getUniqueId(), System.currentTimeMillis())));
-        lines.add("&fHP    &8» &c" + health(viewer) + "&7/&c" + maxHealth(viewer) + " &6" + viewer.getFoodLevel());
-        lines.add("&fArmor &8» &9" + armorPoints(viewer) + " &fDMG &8» &4" + weaponDamage(viewer.getInventory().getItemInMainHand()));
-        lines.add("&8&m--------------&r");
+        String[] lines = {
+            color("&8━━━━━━━━━━━━"),
+            color("&7HP      &8» &c&l" + health(viewer) + "&7/" + maxHealth(viewer)),
+            color("&7Food    &8» &6&l" + viewer.getFoodLevel()),
+            color("&7Armor   &8» &9&l" + armorPoints(viewer)),
+            color("&7Damage  &8» &4&l" + weaponDamage(viewer.getInventory().getItemInMainHand())),
+            color("&7TPS     &8» " + tpsColor() + "&l" + formatTps()),
+            color("&7Ping    &8» &a&l" + viewer.getPing() + "ms"),
+            color("&7Online  &8» &e&l" + Bukkit.getOnlinePlayers().size() + "&7/" + Bukkit.getMaxPlayers()),
+            color("&7Death   &8» &c&l" + viewer.getStatistic(Statistic.DEATHS)),
+            color("&7Session &8» &d&l" + formatMillis(System.currentTimeMillis() - sessionStarted.getOrDefault(viewer.getUniqueId(), System.currentTimeMillis()))),
+            color("&8━━━━━━━━━━━━")
+        };
 
         for (int i = 0; i < SIDEBAR_ENTRIES.length; i++) {
             Team team = board.getTeam("line" + i);
@@ -172,11 +169,11 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
             if (!team.hasEntry(entry)) {
                 team.addEntry(entry);
             }
-            team.setPrefix(color(lines.get(i)));
+            team.setPrefix(lines[i]);
         }
 
         refreshViewerTeams(board);
-        viewer.setPlayerListName(color("&dMeji &8| &f" + viewer.getName() + " &c" + health(viewer) + "HP &9" + armorPoints(viewer) + "AR"));
+        viewer.setPlayerListName(color(tabName(viewer)));
     }
 
     private void refreshViewerTeams(Scoreboard board) {
@@ -189,9 +186,60 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
             if (!team.hasEntry(target.getName())) {
                 team.addEntry(target.getName());
             }
-            team.setPrefix(color("&7"));
-            team.setSuffix(color(" &8[&c" + health(target) + "HP &9" + armorPoints(target) + "AR&8]"));
+            team.setPrefix(color(namePrefix(target)));
+            team.setSuffix(color(nameSuffix(target)));
         }
+    }
+
+    private String tabName(Player player) {
+        return rolePrefix(player) + " &f" + player.getName() + " " + compactVitals(player);
+    }
+
+    private String namePrefix(Player player) {
+        return rolePrefix(player) + " &7";
+    }
+
+    private String nameSuffix(Player player) {
+        int page = (int) ((System.currentTimeMillis() / 1800L) % 5L);
+        return switch (page) {
+            case 0 -> " " + compactVitals(player);
+            case 1 -> " &8[&6Food &e" + player.getFoodLevel() + " &6Day &f" + worldDay(player) + "&8]";
+            case 2 -> " &8[&dPlayed &f" + formatTicks(player.getStatistic(Statistic.PLAY_ONE_MINUTE)) + " &cDeath &f" + player.getStatistic(Statistic.DEATHS) + "&8]";
+            case 3 -> " &8[&bPing &f" + player.getPing() + "ms &bTPS &f" + formatTps() + "&8]";
+            default -> " &8[&a" + movementState(player) + " &4DMG &f" + weaponDamage(player.getInventory().getItemInMainHand()) + "&8]";
+        };
+    }
+
+    private String compactVitals(Player player) {
+        return "&8[&cHP &f" + health(player) + "&7/" + maxHealth(player) + " &9AR &f" + armorPoints(player) + "&8]";
+    }
+
+    private String movementState(Player player) {
+        if (player.isGliding()) return "GLIDE";
+        if (player.isSwimming()) return "SWIM";
+        if (player.isFlying()) return "FLY";
+        if (player.isSprinting()) return "RUN";
+        if (player.getVelocity().lengthSquared() > 0.015D) return "WALK";
+        return "IDLE";
+    }
+
+    private String rolePrefix(Player player) {
+        String normalized = player.getName().toLowerCase(Locale.ROOT);
+        if (normalized.equals("tanpoint")) {
+            return "&8[" + roleText("Builder", "&a", "&2") + "&8]";
+        }
+        if (normalized.equals(".electedrun19") || normalized.equals("electedrun19")) {
+            return "&8[" + roleText("Hunter", "&c", "&4") + "&8] &8[" + roleText("Explorer", "&b", "&3") + "&8]";
+        }
+        if (normalized.startsWith(".zakk") || normalized.startsWith("zakk")) {
+            return "&8[" + roleText("Miner", "&6", "&e") + "&8] &8[" + roleText("Supplyer", "&d", "&5") + "&8]";
+        }
+        return "&8[&7Player&8]";
+    }
+
+    private String roleText(String text, String firstColor, String secondColor) {
+        int split = Math.max(1, text.length() / 2);
+        return firstColor + "&l" + text.substring(0, split) + secondColor + "&l" + text.substring(split);
     }
 
     private int health(Player player) {
@@ -292,6 +340,10 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
         return (int) (player.getWorld().getFullTime() / 24000L);
     }
 
+    private String blockPos(Player player) {
+        return player.getLocation().getBlockX() + " " + player.getLocation().getBlockY() + " " + player.getLocation().getBlockZ();
+    }
+
     private String formatTicks(int ticks) {
         return formatMillis(ticks * 50L);
     }
@@ -320,6 +372,38 @@ public final class MejiAdvancedPlugin extends JavaPlugin implements Listener {
 
     private String color(String text) {
         return ChatColor.translateAlternateColorCodes('&', text);
+    }
+
+    private String gradient(String text, String startHex, String endHex) {
+        int[] start = rgb(startHex);
+        int[] end = rgb(endHex);
+        StringBuilder out = new StringBuilder();
+        int denominator = Math.max(1, text.length() - 1);
+        for (int i = 0; i < text.length(); i++) {
+            double mix = i / (double) denominator;
+            int red = (int) Math.round(start[0] + ((end[0] - start[0]) * mix));
+            int green = (int) Math.round(start[1] + ((end[1] - start[1]) * mix));
+            int blue = (int) Math.round(start[2] + ((end[2] - start[2]) * mix));
+            out.append(hexColor(red, green, blue)).append(ChatColor.BOLD).append(text.charAt(i));
+        }
+        return out.toString();
+    }
+
+    private int[] rgb(String hex) {
+        return new int[] {
+            Integer.parseInt(hex.substring(1, 3), 16),
+            Integer.parseInt(hex.substring(3, 5), 16),
+            Integer.parseInt(hex.substring(5, 7), 16)
+        };
+    }
+
+    private String hexColor(int red, int green, int blue) {
+        String hex = String.format("%02x%02x%02x", red, green, blue);
+        StringBuilder out = new StringBuilder("§x");
+        for (int i = 0; i < hex.length(); i++) {
+            out.append('§').append(hex.charAt(i));
+        }
+        return out.toString();
     }
 
     private record EntityDamageSnapshot(String message) {

@@ -1,0 +1,45 @@
+{
+  "stats": {
+    "minecraft:mined": {
+      "minecraft:fire": 1
+    },
+    "minecraft:picked_up": {
+      "minecraft:coal": 1,
+      "minecraft:nether_brick_fence": 1,
+      "minecraft:blaze_rod": 3,
+      "minecraft:bone": 2
+    },
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 17947,
+      "minecraft:walk_one_cm": 10472,
+      "minecraft:leave_game": 2,
+      "minecraft:mob_kills": 14,
+      "minecraft:damage_taken": 2340,
+      "minecraft:damage_dealt": 400,
+      "minecraft:play_time": 75581,
+      "minecraft:jump": 86,
+      "minecraft:time_since_death": 17855,
+      "minecraft:sprint_one_cm": 11364,
+      "minecraft:fall_one_cm": 2125,
+      "minecraft:total_world_time": 75581,
+      "minecraft:fly_one_cm": 22266,
+      "minecraft:deaths": 6
+    },
+    "minecraft:killed": {
+      "minecraft:zombified_piglin": 1,
+      "minecraft:zombie": 1,
+      "minecraft:skeleton": 1,
+      "minecraft:wither_skeleton": 1,
+      "minecraft:blaze": 10
+    },
+    "minecraft:used": {
+      "minecraft:netherite_sword": 3,
+      "minecraft:map": 1
+    },
+    "minecraft:killed_by": {
+      "minecraft:blaze": 4,
+      "minecraft:zombie": 2
+    }
+  },
+  "DataVersion": 4790
+}

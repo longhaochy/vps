@@ -1,0 +1,7 @@
+name: KapakWeaponOverpower
+main: me.meji.kapakoverpower.KapakWeaponOverpowerPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Adds extreme knockback, lightning, huge horror impact, speed, heal, and kill notifications for KapakWeapon.
+folia-supported: true

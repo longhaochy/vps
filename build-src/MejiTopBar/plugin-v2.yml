@@ -1,0 +1,7 @@
+name: MejiTopBarV2
+main: me.meji.topbar.MejiTopBarPlugin
+version: 1.1.0
+api-version: '1.21'
+author: Meji
+description: Minimal animated gradient top bossbar with server address.
+folia-supported: true

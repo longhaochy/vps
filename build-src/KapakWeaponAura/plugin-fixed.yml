@@ -1,0 +1,7 @@
+name: KapakWeaponAuraPulseFixed
+main: me.meji.kapakaura.KapakWeaponAuraPlugin
+version: 1.2.0
+api-version: '1.21'
+author: Meji
+description: Adds a 1-second red-sky aura pulse when switching to KapakWeapon.
+folia-supported: true

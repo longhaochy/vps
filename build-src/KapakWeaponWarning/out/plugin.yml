@@ -1,0 +1,7 @@
+name: KapakWeaponWarning
+main: me.meji.kapakwarning.KapakWeaponWarningPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Warns nearby players when someone holds the divine kapak.
+folia-supported: true

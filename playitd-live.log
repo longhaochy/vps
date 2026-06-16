@@ -1,0 +1,22 @@
+[2m2026-06-15T02:59:00.874185Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mNone [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T02:59:07.174148Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mSome("/tmp/playitd.sock") [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T02:59:13.825922Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mSome("/workspaces/vps/tmp/playitd.sock") [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T02:59:22.111736Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mSome("/workspaces/vps/tmp/playitd.sock") [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T02:59:22.655960Z[0m [31mERROR[0m [2mplayit_agent_core::agent_control::address_selector[0m[2m:[0m failed to send initial ping [3merror[0m[2m=[0mOs { code: 101, kind: NetworkUnreachable, message: "Network unreachable" } [3maddr[0m[2m=[0m[2602:fbaf:848:1::1]:5525
+[2m2026-06-15T02:59:22.655985Z[0m [31mERROR[0m [2mplayit_agent_core::agent_control::address_selector[0m[2m:[0m failed to ping tunnel server
+[2m2026-06-15T02:59:23.893481Z[0m [33m WARN[0m [2mplayit_agent_core::agent_control::maintained_control[0m[2m:[0m control session expired; reconnecting [3mreason[0m[2m=[0mSessionNotSetup
+[2m2026-06-15T02:59:24.116956Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m playit connected; tunnels loaded [3magent_id[0m[2m=[0mad268985-bcd5-4146-b7dc-1a8703a9ed12 [3mtunnel_count[0m[2m=[0m2 [3mpending_tunnel_count[0m[2m=[0m0 [3mdisabled_tunnel_count[0m[2m=[0m1 [3maccount_status[0m[2m=[0m"verified"
+[2m2026-06-15T02:59:25.152109Z[0m [33m WARN[0m [2mplayit_agent_core::agent_control::maintained_control[0m[2m:[0m control session expired; reconnecting [3mreason[0m[2m=[0mSessionNotSetup
+[2m2026-06-15T03:00:49.660611Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Received Ctrl+C, shutting down
+[2m2026-06-15T03:00:49.660679Z[0m [32m INFO[0m [2mplayitd::ipc_server[0m[2m:[0m IPC server shutting down
+[2m2026-06-15T03:00:49.661122Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m playitd shutdown complete
+[2m2026-06-15T18:14:01.908986Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mSome("/workspaces/vps/tmp/playitd.sock") [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T18:14:10.739122Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Starting playitd [3msocket_path[0m[2m=[0mSome("/workspaces/vps/tmp/playitd.sock") [3msecret_path[0m[2m=[0mSome(".playit/playit.toml") [3mversion[0m[2m=[0m1.0.10
+[2m2026-06-15T18:14:11.241018Z[0m [31mERROR[0m [2mplayit_agent_core::agent_control::address_selector[0m[2m:[0m failed to send initial ping [3merror[0m[2m=[0mOs { code: 101, kind: NetworkUnreachable, message: "Network unreachable" } [3maddr[0m[2m=[0m[2602:fbaf:848:1::1]:5525
+[2m2026-06-15T18:14:11.241034Z[0m [31mERROR[0m [2mplayit_agent_core::agent_control::address_selector[0m[2m:[0m failed to ping tunnel server
+[2m2026-06-15T18:14:12.474317Z[0m [33m WARN[0m [2mplayit_agent_core::agent_control::maintained_control[0m[2m:[0m control session expired; reconnecting [3mreason[0m[2m=[0mSessionNotSetup
+[2m2026-06-15T18:14:12.727505Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m playit connected; tunnels loaded [3magent_id[0m[2m=[0mad268985-bcd5-4146-b7dc-1a8703a9ed12 [3mtunnel_count[0m[2m=[0m2 [3mpending_tunnel_count[0m[2m=[0m0 [3mdisabled_tunnel_count[0m[2m=[0m1 [3maccount_status[0m[2m=[0m"verified"
+[2m2026-06-15T18:14:13.721494Z[0m [33m WARN[0m [2mplayit_agent_core::agent_control::maintained_control[0m[2m:[0m control session expired; reconnecting [3mreason[0m[2m=[0mSessionNotSetup
+[2m2026-06-15T18:15:51.758048Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m Received Ctrl+C, shutting down
+[2m2026-06-15T18:15:51.758184Z[0m [32m INFO[0m [2mplayitd::ipc_server[0m[2m:[0m IPC server shutting down
+[2m2026-06-15T18:15:51.758618Z[0m [32m INFO[0m [2mplayitd::daemon[0m[2m:[0m playitd shutdown complete

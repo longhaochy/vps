@@ -1,0 +1,9 @@
+name: MejiClaimsV3
+main: me.meji.claims.MejiClaimsPlugin
+version: 1.2.0
+api-version: '1.21'
+commands:
+  kit:
+    description: Claim kit command.
+    usage: /kit claim
+    aliases: [claimkit]

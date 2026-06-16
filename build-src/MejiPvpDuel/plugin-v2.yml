@@ -1,0 +1,11 @@
+name: MejiPvpDuelV2
+main: me.meji.pvpduel.MejiPvpDuelPlugin
+version: 1.1.0
+api-version: '1.21'
+commands:
+  pvp:
+    description: Invite a player to a flat world PvP duel or toggle PvP protection.
+    usage: /pvp <player|on|off>
+  pvpaccept:
+    description: Accept the latest PvP duel invite.
+    usage: /pvpaccept

@@ -1,0 +1,7 @@
+name: MejiAdvancedV8
+main: me.meji.advanced.MejiAdvancedPlugin
+version: 1.6.1
+api-version: '1.21'
+author: Meji
+description: Bedrock-stable survival scoreboard with compact map context.
+folia-supported: true

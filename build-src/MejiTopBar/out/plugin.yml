@@ -1,0 +1,7 @@
+name: MejiTopBar
+main: me.meji.topbar.MejiTopBarPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Animated top bossbar with server address and rotating slogans.
+folia-supported: true

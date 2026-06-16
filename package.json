@@ -1,9 +1,13 @@
 {
+  "scripts": {
+    "bots:10": "node scripts/mineflayer-10-bots.js"
+  },
   "dependencies": {
     "cluster": "^0.7.7",
     "crypto": "^1.0.1",
     "events": "^3.3.0",
     "http2": "^3.3.6",
+    "mineflayer": "^4.37.1",
     "puppeteer-real-browser": "^1.4.4",
     "tls": "^0.0.1",
     "url": "^0.11.4"

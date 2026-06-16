@@ -1,0 +1,11 @@
+name: MejiClaims
+main: me.meji.claims.MejiClaimsPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Golden shovel claim protection for Meji.
+folia-supported: true
+commands:
+  kit:
+    description: Claim kit command.
+    usage: /kit claim

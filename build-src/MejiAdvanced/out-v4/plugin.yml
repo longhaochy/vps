@@ -1,0 +1,7 @@
+name: MejiAdvancedV4
+main: me.meji.advanced.MejiAdvancedPlugin
+version: 1.3.0
+api-version: '1.21'
+author: Meji
+description: Vertical compact advanced scoreboard with clear labels and highlighted values.
+folia-supported: true

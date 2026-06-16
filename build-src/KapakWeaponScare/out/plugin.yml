@@ -1,0 +1,7 @@
+name: KapakWeaponScare
+main: me.meji.kapakscare.KapakWeaponScarePlugin
+version: 1.0.0
+api-version: '1.21'
+author: Meji
+description: Adds terrifying visual and sound effects for KapakWeapon.
+folia-supported: true

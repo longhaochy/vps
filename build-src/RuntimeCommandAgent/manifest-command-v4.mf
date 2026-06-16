@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Agent-Class: me.meji.runtime.RuntimeCommandAgentV4
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+

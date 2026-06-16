@@ -1,0 +1,26 @@
+{
+  "namespace": "hud",
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "meji_map_panel@hud.meji_map_panel": {}
+          }
+        ]
+      }
+    ]
+  },
+  "meji_map_panel": {
+    "type": "image",
+    "texture": "textures/ui/meji_map_panel",
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "offset": [8, -8],
+    "size": [84, 84],
+    "alpha": 0.88,
+    "visible": true
+  }
+}

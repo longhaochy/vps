@@ -1,0 +1,14 @@
+name: MejiCamera
+version: 1.0.0
+main: me.meji.camera.MejiCameraPlugin
+api-version: '1.21'
+description: Server-side camera mode toggle.
+commands:
+  camera:
+    description: Toggle camera mode.
+    usage: /camera <on|off>
+    permission: mejicamera.use
+permissions:
+  mejicamera.use:
+    description: Allows using /camera.
+    default: true

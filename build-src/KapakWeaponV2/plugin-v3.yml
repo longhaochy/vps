@@ -1,0 +1,11 @@
+name: KapakWeaponV3
+main: me.meji.kapakv2.KapakWeaponV2Plugin
+version: 3.0.0
+api-version: '1.21'
+author: Meji
+description: Adds /get kapak and /get pedang with long reach execution combat.
+folia-supported: true
+commands:
+  get:
+    description: Get custom Meji weapons.
+    usage: /get <kapak|pedang>

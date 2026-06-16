@@ -1,0 +1,7 @@
+name: MejiAdvancedV6
+main: me.meji.advanced.MejiAdvancedPlugin
+version: 1.5.0
+api-version: '1.21'
+author: Meji
+description: Role nametags with clear scoreboard death count.
+folia-supported: true

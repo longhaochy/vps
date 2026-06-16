@@ -1,0 +1,14 @@
+name: MejiAfk
+version: 1.0.0
+main: me.meji.afk.MejiAfkPlugin
+api-version: '1.21'
+description: Protected AFK mantra mode.
+commands:
+  afk:
+    description: Toggle protected AFK mode.
+    usage: /afk <on|off>
+    permission: mejiafk.use
+permissions:
+  mejiafk.use:
+    description: Allows using /afk.
+    default: true

@@ -31,7 +31,7 @@ keep-exp-on-death: 1.0
 # World specific settings. These will override the above global settings for the specified world
 worlds:
   world:
-    enabled: false
+    enabled: true
     require-permission: false
     keep-on-killed-by-player: true
     keep-on-natural-death: true
@@ -40,7 +40,7 @@ worlds:
     keep-exp-on-death: 1.0
 
   world_nether:
-    enabled: false
+    enabled: true
     require-permission: false
     keep-on-killed-by-player: true
     keep-on-natural-death: true
@@ -49,7 +49,7 @@ worlds:
     keep-exp-on-death: 1.0
 
   world_the_end:
-    enabled: false
+    enabled: true
     require-permission: false
     keep-on-killed-by-player: true
     keep-on-natural-death: true

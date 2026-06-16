@@ -5,7 +5,7 @@ ROOT_DIR="${ROOT_DIR:-/workspaces/vps}"
 PLAYIT_DIR="$ROOT_DIR/.playit"
 RUN_DIR="$ROOT_DIR/tmp"
 LOG_DIR="$ROOT_DIR/logs"
-SECRET_PATH="$PLAYIT_DIR/playit.toml"
+SECRET_PATH="${PLAYIT_SECRET_PATH:-/home/codespace/.config/playit_gg/playit.toml}"
 SOCKET_PATH="$RUN_DIR/playitd.sock"
 LOG_PATH="$LOG_DIR/playit.log"
 PID_PATH="$RUN_DIR/playitd.pid"
@@ -31,7 +31,6 @@ setsid playitd \
   --secret-path "$SECRET_PATH" \
   --socket-path "$SOCKET_PATH" \
   -l "$LOG_PATH" \
-  --platform-docker \
   >/dev/null 2>&1 < /dev/null &
 
 echo "$!" > "$PID_PATH"
